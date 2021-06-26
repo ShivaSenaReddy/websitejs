@@ -8,20 +8,20 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Challenge1", "http://localh
 		UseIISExpress = "true"
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_53594"
-		Debug.AspNetCompiler.PhysicalPath = "D:\udemy\jsmosh\Challenge1\"
+		Debug.AspNetCompiler.PhysicalPath = "..\Challenge1\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_53594\"
 		Debug.AspNetCompiler.Updateable = "true"
 		Debug.AspNetCompiler.ForceOverwrite = "true"
 		Debug.AspNetCompiler.FixedNames = "false"
 		Debug.AspNetCompiler.Debug = "True"
 		Release.AspNetCompiler.VirtualPath = "/localhost_53594"
-		Release.AspNetCompiler.PhysicalPath = "D:\udemy\jsmosh\Challenge1\"
+		Release.AspNetCompiler.PhysicalPath = "..\Challenge1\"
 		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_53594\"
 		Release.AspNetCompiler.Updateable = "true"
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
-		SlnRelativePath = "D:\udemy\jsmosh\Challenge1\"
+		SlnRelativePath = "..\Challenge1\"
 	EndProjectSection
 EndProject
 Global
@@ -36,6 +36,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {209F9F04-6B53-4F25-8B00-6138C4A09DFD}
+		SolutionGuid = {D520C3BD-7D00-4023-9028-A23EA8E093AA}
 	EndGlobalSection
 EndGlobal
