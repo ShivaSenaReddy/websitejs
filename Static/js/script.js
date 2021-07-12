@@ -5,20 +5,20 @@ console.log("hello");
 function ageindays() {
     let age = prompt("how old are you");
     //console.log(age * 365);
-   let h1=document.createElement("h1");
-  h1.setAttribute('id', 'ageindays');
+    let h1 = document.createElement("h1");
+    h1.setAttribute('id', 'ageindays');
     // document.getElementById("result").textContent = age*365;
-    let text = document.createTextNode("your age in days is " + age * 365  );
+    let text = document.createTextNode("your age in days is " + age * 365);
     console.log(text);
-  h1.appendChild(text);
+    h1.appendChild(text);
     document.getElementById('result').appendChild(h1);
     let p = document.createElement("p");
     let text1 = document.createTextNode("thanks for using the link");
-    
+
     p.appendChild(text1);
     p.setAttribute('id', 'test');
     document.getElementById("result").appendChild(p);
-    
+
 }
 
 function reset() {
@@ -26,7 +26,7 @@ function reset() {
 }
 
 
-function catgeneratortest(){
+function catgeneratortest() {
     h1 = document.createElement('h1');
     let text = document.createTextNode('here cats will be generated');
     h1.appendChild(text);
@@ -41,7 +41,7 @@ function catgenerator() {
 }
 
 function botchoicegen() {
-    let num = Math.floor(Math.random()*3)+1;
+    let num = Math.floor(Math.random() * 3) + 1;
     switch (num) {
         case 1:
             return 'rock';
@@ -63,11 +63,11 @@ function rcpgamefn(yourchoice1) {
     yourchoice = yourchoice1.id;
     botchoice = botchoicegen();
     console.log('your choice is ' + yourchoice);
-    console.log('bot choice is '+botchoice);
+    console.log('bot choice is ' + botchoice);
     if (botchoice == 'rock' && yourchoice == 'rock') {
         console.log('tie');
     }
-    else if (botchoice == 'rock' && yourchoice == 'paper'){
+    else if (botchoice == 'rock' && yourchoice == 'paper') {
         console.log('won');
     }
     else if (botchoice == 'rock' && yourchoice == 'scissors') {
@@ -91,7 +91,7 @@ function rcpgamefn(yourchoice1) {
     else if (botchoice == 'paper' && yourchoice == 'rock') {
         console.log('won');
     }
- 
+
 
 }
 
@@ -107,25 +107,25 @@ function rpsgame(yourchoice) {
 }
 
 
-function rpsdatabase(a,b){
+function rpsdatabase(a, b) {
     let rpdb = {
         'rock': { 'scissors': 1, 'paper': 0, 'rock': 0.5 },
         'paper': { 'rock': 1, 'scissors': 0, 'paper': 0.5 },
         'scissors': { 'rock': 0, 'scissors': 0.5, 'paper': 1 }
     };
     //console.log(rpdb['paper']['rock']);
-    return rpdb[a][b]; 
+    return rpdb[a][b];
 }
 
 
 
 function resultdecider(result) {
     switch (result) {
-    case 1:
+        case 1:
             console.log('you won');
             return { 'message': 'you won', 'color': 'green' };
-    break;
-    case 0.5:
+            break;
+        case 0.5:
             console.log('tie');
             return { 'message': 'tie', 'color': 'yellow' };
             break;
@@ -136,7 +136,7 @@ function resultdecider(result) {
     }
 }
 
-function frontend(humanimgchoice,botimgchoice,message){
+function frontend(humanimgchoice, botimgchoice, message) {
     let imgdb = {
         'rock': document.getElementById('rock').src,
         'paper': document.getElementById('paper').src,
@@ -145,18 +145,18 @@ function frontend(humanimgchoice,botimgchoice,message){
     document.getElementById('rock').remove();
     document.getElementById('paper').remove();
     document.getElementById('scissors').remove();
-    let humanchoice, botchoice,messagediv;
+    let humanchoice, botchoice, messagediv;
     humandiv = document.createElement('div');
     botdiv = document.createElement('div');
     messagediv = document.createElement('div');
     humandiv.innerHTML = "<img src='" + imgdb[humanimgchoice] + "' height=150,width=150 style='box-shadow:0px 10px 50px red;'/> ";
     document.getElementById('rcpgame').appendChild(humandiv);
     botdiv.innerHTML = "<img src='" + imgdb[botimgchoice] + "' height=150,width=150 style='box-shadow:0px 10px 50px red;'/> ";
-    messagediv.innerHTML = "<h1 style='color:" + message['color']+"'>"+message['message']+"</h1>"
+    messagediv.innerHTML = "<h1 style='color:" + message['color'] + "'>" + message['message'] + "</h1>"
     document.getElementById('rcpgame').appendChild(messagediv);
     document.getElementById('rcpgame').appendChild(botdiv);
     //messagediv.innerHTML = "<h1 style='color:" + message['color']"'> '"+message['message']+"'</h1 > ";
-    
+
 
 }
 
@@ -171,9 +171,9 @@ let copyallbuttons = [];
 for (let i = 0; i < allbuttons.length; i++) {
     //copyallbuttons.push(allbuttons[i]);
     copyallbuttons[i] = allbuttons[i].classList[1];
-    console.log(allbuttons[i]  );;
+    console.log(allbuttons[i]);;
 }
-    console.log(copyallbuttons);
+console.log(copyallbuttons);
 
 
 function buttonColorChange(buttonthingy) {
@@ -181,16 +181,16 @@ function buttonColorChange(buttonthingy) {
     if (buttonthingy.value == 'red') {
         buttonsRed();
     }
-   else if (buttonthingy.value == 'green') {
+    else if (buttonthingy.value == 'green') {
         buttonsGreen();
     }
     else if (buttonthingy.value == 'yellow') {
         buttonsYellow();
     }
-    else if ( buttonthingy.value == 'random') {
+    else if (buttonthingy.value == 'random') {
         buttonsRandom();
     }
-   
+
     else if (buttonthingy.value == 'reset') {
         buttonsReset();
     }
@@ -245,19 +245,19 @@ let blackjackgame = {
     'cardmap': {
         '2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9, '10': 10, 'J': 10, 'Q': 10, 'K': 10, 'A': [1, 11]
     },
-        'wins': 0,
-        'draws': 0,
+    'wins': 0,
+    'draws': 0,
     'losses': 0,
     'isStand': false,
-    'turnsOver':false,
-    }
-;
+    'turnsOver': false,
+}
+    ;
 
 const YOU = blackjackgame['you'];
 const DEALER = blackjackgame['dealer'];
-const hitsound = new Audio("static/sounds/swish.m4a");
-const winsound = new Audio('static/sounds/cash.mp3');
-const losssound = new Audio('static/sounds/aww.mp3');
+const hitsound = new Audio("Static/sounds/swish.m4a");
+const winsound = new Audio('Static/sounds/cash.mp3');
+const losssound = new Audio('Static/sounds/aww.mp3');
 function blackjackhitfn() {
     if (blackjackgame['isStand'] == false) {
         let card = randomcard();
@@ -274,7 +274,7 @@ function showcard(activePlayer, card) {
 
     if (activePlayer['score'] <= 21) {
         let cardimg = document.createElement('img');
-        cardimg.src = "static/images/" + card + ".png";
+        cardimg.src = "Static/images/" + card + ".png";
         //cardimg.src="static/images/${card}.png"
         para = document.createElement('div');
         textnode = document.createTextNode("adjkhndkjhndkjndk");
@@ -305,7 +305,7 @@ function showscore(activePlayer, card) {
         activePlayer['score'] += blackjackgame['cardmap'][card];
     }
     console.log(activePlayer['score']);
-   ;
+    ;
 }
 function showscorefrontend(activePlayer) {
     console.log(activePlayer['score']);
@@ -319,14 +319,14 @@ function showscorefrontend(activePlayer) {
     }
 }
 
-function test(){
+function test() {
     img1 = document.createElement('img');
     img1.src = "static/images/q.png";
     //img1.setAttribute()
     document.querySelector('.one').appendChild(img1);
     img1 = document.querySelector('.one img');
     img1.width = 150;
-  
+
 }
 
 document.querySelector('#blackjack-deal').addEventListener('click', blackjackdealfn);
@@ -334,27 +334,27 @@ document.querySelector('#blackjack-deal').addEventListener('click', blackjackdea
 function blackjackdealfn() {
     //alert('hi');
     if (blackjackgame['turnsOver'] == true) {
-    document.querySelector('#dealerscore').textContent = 0;
-    let yourimages = document.querySelector(YOU['div']).querySelectorAll('img');
-    let dealerimages = document.querySelector(DEALER['div']).querySelectorAll('img');
-    console.log(yourimages);
-    for (let i = yourimages.length-1; i >=0; i--) {
-        console.log(i);
-        yourimages[i].remove();
-    }
-    for (let i = dealerimages.length - 1; i >= 0; i--) {
-        console.log(i);
-        dealerimages[i].remove();
-    }
-    
-  
-    YOU['score'] = 0;
-    DEALER['score'] = 0;
-    document.querySelector('#dealerscore').textContent = 0;
-    document.querySelector('#dealerscore').style.color = 'white';
-    document.querySelector('#yourscore').textContent = 0;
-    document.querySelector('#yourscore').style.color = 'white';
-    document.querySelector('#blackjack_result').textContent = "let's play!!";
+        document.querySelector('#dealerscore').textContent = 0;
+        let yourimages = document.querySelector(YOU['div']).querySelectorAll('img');
+        let dealerimages = document.querySelector(DEALER['div']).querySelectorAll('img');
+        console.log(yourimages);
+        for (let i = yourimages.length - 1; i >= 0; i--) {
+            console.log(i);
+            yourimages[i].remove();
+        }
+        for (let i = dealerimages.length - 1; i >= 0; i--) {
+            console.log(i);
+            dealerimages[i].remove();
+        }
+
+
+        YOU['score'] = 0;
+        DEALER['score'] = 0;
+        document.querySelector('#dealerscore').textContent = 0;
+        document.querySelector('#dealerscore').style.color = 'white';
+        document.querySelector('#yourscore').textContent = 0;
+        document.querySelector('#yourscore').style.color = 'white';
+        document.querySelector('#blackjack_result').textContent = "let's play!!";
         document.querySelector('#blackjack_result').style.color = 'black';
         blackjackgame['isStand'] = false;
         blackjackgame['turnsOver'] = false;
@@ -376,11 +376,11 @@ async function dealerLogic() {
         await sleep(1000);
     }
 
-        let Winner = winner(YOU, DEALER)
-        showResult(Winner);
-        blackjackgame['turnsOver'] = true;
-    
-    
+    let Winner = winner(YOU, DEALER)
+    showResult(Winner);
+    blackjackgame['turnsOver'] = true;
+
+
 }
 
 function winner() {
@@ -434,7 +434,7 @@ function showResult(Winner) {
     }
     else {
         message = 'drew';
-        messageColor = 'black'; 
+        messageColor = 'black';
         document.querySelector('#draw').textContent = blackjackgame['draws']
     }
     document.querySelector('#blackjack_result').textContent = message;
