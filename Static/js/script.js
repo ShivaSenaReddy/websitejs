@@ -274,7 +274,7 @@ function showcard(activePlayer, card) {
 
     if (activePlayer['score'] <= 21) {
         let cardimg = document.createElement('img');
-        cardimg.src = "Static/images/" + card + ".png";
+        cardimg.src = "Static/images/" + card + ".PNG";
         //cardimg.src="static/images/${card}.png"
         para = document.createElement('div');
         textnode = document.createTextNode("adjkhndkjhndkjndk");
